@@ -1,8 +1,9 @@
 import { useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap, prefersReducedMotion } from '@/lib/scroll'
+import { contact } from '@/lib/data'
 
-const EMAIL = 'hello@tojammel.dev'
+const EMAIL = contact.email
 
 const inputCls =
   'w-full border-b border-[var(--line)] bg-transparent py-3.5 text-[15px] text-[var(--ink)] placeholder:text-[var(--ink-3)] focus:border-[var(--accent)] focus:outline-none transition-colors duration-300'
@@ -64,8 +65,8 @@ export default function Contact() {
           <ul data-contact className="mt-10 flex flex-col gap-4">
             {[
               { label: 'Email', value: EMAIL, href: `mailto:${EMAIL}` },
-              { label: 'LinkedIn', value: 'linkedin.com/in/tojammel', href: 'https://www.linkedin.com/' },
-              { label: 'GitHub', value: 'github.com/tojammel', href: 'https://github.com/' },
+              { label: 'LinkedIn', value: contact.linkedin.label, href: contact.linkedin.href },
+              { label: 'GitHub', value: contact.github.label, href: contact.github.href },
             ].map((c) => (
               <li key={c.label} className="flex items-baseline gap-4">
                 <span className="w-20 font-display text-xs font-medium uppercase tracking-[0.18em] text-[var(--ink-3)]">

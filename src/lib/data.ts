@@ -219,3 +219,9 @@ export const techStack = [
   'PostgreSQL',
   'Docker',
 ]
+
+export const contact = {
+  email: 'contact@tojammelhoque.com',
+  linkedin: { label: 'linkedin.com/in/tojammelhoque', href: 'https://www.linkedin.com/in/tojammelhoque' },
+  github: { label: 'github.com/tojammelhoque', href: 'https://github.com/tojammelhoque' },
+}

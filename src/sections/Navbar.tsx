@@ -45,7 +45,7 @@ export default function Navbar() {
           onClick={go('#top')}
           className="font-display text-sm font-semibold tracking-[0.22em] text-[var(--ink)]"
         >
-          TOJAMMEL
+          TOJAMMEL HOQUE
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">

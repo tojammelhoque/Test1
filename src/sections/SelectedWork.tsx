@@ -11,7 +11,6 @@ const CLIP_SHOWN = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
 export default function SelectedWork() {
   const root = useRef<HTMLElement>(null)
   const [active, setActive] = useState<Project | null>(null)
-  const [reduced] = useState(() => prefersReducedMotion())
   const close = useCallback(() => setActive(null), [])
 
   useGSAP(
@@ -87,7 +86,7 @@ export default function SelectedWork() {
   return (
     <section ref={root} id="work" aria-label="Selected work" className="bg-[var(--dark)] text-[#ece9e0]">
       {/* ---------- Desktop: pinned cinematic showcase ---------- */}
-      <div data-work-pin className={reduced ? 'hidden' : 'hidden lg:block'}>
+      <div data-work-pin className="hidden lg:block motion-reduce:lg:hidden">
         <div className="flex h-screen flex-col justify-center">
           <div className="container-site">
             <div className="mb-10 flex items-end justify-between">
@@ -163,7 +162,7 @@ export default function SelectedWork() {
       </div>
 
       {/* ---------- Mobile / tablet / reduced-motion: stacked cards ---------- */}
-      <div className={`container-site py-24 ${reduced ? '' : 'lg:hidden'}`}>
+      <div className="container-site py-24 lg:hidden motion-reduce:lg:block">
         <p className="eyebrow eyebrow-on-dark mb-4">Selected Work</p>
         <h2 className="font-display text-[clamp(2rem,7vw,2.8rem)] font-medium leading-tight tracking-[-0.02em]">
           Work that <em className="font-editorial font-normal italic text-[#9db1ff]">speaks</em> for itself

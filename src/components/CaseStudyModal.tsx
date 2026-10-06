@@ -74,7 +74,7 @@ export default function CaseStudyModal({
             ✕
           </button>
         </div>
-        <div className="overflow-y-auto p-6 md:p-8">
+        <div data-lenis-prevent className="overflow-y-auto p-6 md:p-8">
           <dl className="flex flex-col gap-8">
             {rows.map((r) => (
               <div key={r.title} className="grid gap-2 md:grid-cols-[10rem_1fr] md:gap-6">

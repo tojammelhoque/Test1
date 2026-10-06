@@ -30,7 +30,7 @@ export default function About() {
         <div className="lg:col-span-5">
           <p data-about className="eyebrow mb-4">About</p>
           <h2 data-about className="font-display text-balance text-[clamp(2rem,4vw,3.1rem)] font-medium leading-[1.06] tracking-[-0.02em]">
-            Hi, I’m <em className="font-editorial font-normal italic text-[var(--accent)]">Tojammel.</em>
+            Hi, I’m <em className="font-editorial font-normal italic text-[var(--accent)]">Tojammel Hoque.</em>
           </h2>
         </div>
         <div className="lg:col-span-6 lg:col-start-7">
